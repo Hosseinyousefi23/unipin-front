@@ -1,0 +1,20 @@
+<ul class="posts">
+  <li *ngFor="let post of posts" class="card">
+    <a routerLink="/post/{{ post.id }}">
+      <app-post-header [img]="post.author.profile_image" [name]="post.author.formal_name"></app-post-header>
+
+      <img class="left floated mini ui image"
+           src="{{ post.image }}">
+      <div class="title">
+        {{ post.title }}
+      </div>
+      <div class="footer">
+        <span *ngFor="let tag of post.tags" class="badge badge-secondary">{{ tag.name }}</span>
+      </div>
+
+    </a>
+  </li>
+
+
+</ul>
+<br style="clear: both"/>
