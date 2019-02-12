@@ -1,7 +1,29 @@
 * {
-  font-family: "B Compset" /*Replace with your custom font*/, sans-serif !important;
   box-sizing: border-box;
 }
+
+@font-face {
+  font-family: IRANSans;
+  font-weight: 200;
+  src: url('../assets/fonts/iranyekanweblight.eot');
+  src: local("?"), url('../assets/fonts/iranyekanweblight.woff') format("woff"), url('../assets/fonts/iranyekanweblight.ttf') format("truetype");
+  font-style: normal
+}
+
+/*:host {*/
+/*direction: rtl;*/
+/*min-height: 100vh;*/
+/*}*/
+
+/**, :host :host-context:focus {*/
+/*outline: 0;*/
+/*}*/
+
+/*:host /deep/ .go-smooth {*/
+/*transition: .5s;*/
+/*-webkit-transition: .5s;*/
+/*-moz-transition: .5s;*/
+/*}*/
 
 app-header {
   overflow: hidden;

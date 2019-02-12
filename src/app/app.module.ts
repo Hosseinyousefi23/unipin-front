@@ -10,6 +10,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { PostDetailComponent } from './post-detail/post-detail.component';
 import { NewPostComponent } from './new-post/new-post.component';
 import { PostHeaderComponent } from './post-header/post-header.component';
+import { SearchBarComponent } from './search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PostHeaderComponent } from './post-header/post-header.component';
     FooterComponent,
     PostDetailComponent,
     NewPostComponent,
-    PostHeaderComponent
+    PostHeaderComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,
