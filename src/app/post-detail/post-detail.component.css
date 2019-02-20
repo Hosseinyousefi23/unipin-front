@@ -15,12 +15,11 @@ input {
 
 button {
   margin-top: 20px;
-  font-family: Arial;
   background-color: #eee;
   border: none;
   padding: 5px 10px;
   border-radius: 4px;
-  cursor: pointer;
+  /*cursor: pointer;*/
   cursor: hand;
 }
 
@@ -40,5 +39,26 @@ img {
 }
 
 .content {
+  margin-top: 50px;
+  width: 100%;
   margin-right: 45px;
+  float: right;
+
+}
+
+.img-column {
+  width: 600px;
+  background-color: #f9f9f9;
+  max-height: 800px;
+  min-height: 400px;
+  float: right;
+  text-align: center;
+}
+
+.content-column {
+  margin-right: 40px;
+  float: right;
+  background-color: #f3f3f3;
+  left: 0;
+  /*background-color: beige;*/
 }

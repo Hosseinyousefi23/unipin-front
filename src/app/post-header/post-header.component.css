@@ -1,6 +1,6 @@
 div {
-  border-bottom: #999 1px solid;
-  float: right;
+  /*border-bottom: #999 1px solid;*/
+  /*float: right;*/
 }
 
 img {
@@ -12,4 +12,34 @@ img {
 
 p {
   display: inline;
+}
+
+#container {
+  /*background-color: #607D8B;*/
+  /*width: 100%;*/
+
+}
+
+/*.pin {*/
+/*position: absolute;*/
+/*width: 50px;*/
+/*!*position: relative;*!*/
+/*right: 150px;*/
+/*top: -40px;*/
+/*background-color: beige;*/
+/*}*/
+.pin {
+  background-color: beige;
+  padding: 5px 7px;
+  position: absolute;
+  top: -30px;
+  left: 150px;
+  border-radius: 100px;
+  z-index: -1;
+}
+
+.pin-img {
+  position: relative;
+  top: -9px;
+  width: 30px;
 }

@@ -1,7 +1,17 @@
 <div class="content">
-  <h2>{{ post.title | uppercase }}</h2>
-  <div><span>id: </span>{{ post.id }}</div>
-  <div><img src="{{ post.image }}"/></div>
-  <p>{{ post.context }}</p>
-  <button (click)="goBack()">go back</button>
+  <div class="img-column">
+    <div><img src="{{ post.image }}"/></div>
+  </div>
+  <div class="content-column">
+    <h2>{{ post.title | uppercase }}</h2>
+    <p>{{ post.context }}</p>
+    <p>{{post.university}}</p>
+    <ul>
+      <li *ngFor="let tag of post.tags">
+        {{tag.name}}
+      </li>
+    </ul>
+    <p>{{post.publish_time | date:'fullDate'}}</p>
+    <button (click)="goBack()">go back</button>
+  </div>
 </div>

@@ -1,5 +1,11 @@
 * {
   box-sizing: border-box;
+  /*direction: rtl !important;*/
+}
+
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 
 @font-face {
@@ -32,16 +38,16 @@ app-header {
   padding: 10px 5px 5px 5px;
 }
 
-app-footer {
-  padding-top: 5px;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: black;
-  color: white;
-  text-align: center;
-}
+/*app-footer div {*/
+/*padding-top: 5px;*/
+/*position: relative;*/
+/*left: 0;*/
+/*bottom: 0;*/
+/*width: 100%;*/
+/*background-color: black;*/
+/*color: white;*/
+/*text-align: center;*/
+/*}*/
 
 app-post-detail {
   margin-right: 20px;
