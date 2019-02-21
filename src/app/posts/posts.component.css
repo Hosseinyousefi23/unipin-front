@@ -39,9 +39,9 @@ img {
   /*flex: 1 auto;*!*/
   /*padding: 10px;*/
   height: 0%;
-  width: 340px;
+  width: 430px;
   /*height: 415px;*/
-  background-color: beige;
+  background-color:  honeydew;
   border-radius: 4px;
 }
 
@@ -72,3 +72,7 @@ img {
   background-color: #555;
   /*float: right;*/
 }
+
+
+
+
