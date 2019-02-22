@@ -1,17 +1,142 @@
-<div class="content">
-  <div class="img-column">
-    <div><img src="{{ post.image }}"/></div>
-  </div>
-  <div class="content-column">
-    <h2>{{ post.title | uppercase }}</h2>
-    <p>{{ post.context }}</p>
-    <p>{{post.university}}</p>
-    <ul>
-      <li *ngFor="let tag of post.tags">
-        {{tag.name}}
-      </li>
-    </ul>
-    <p>{{post.publish_time | date:'fullDate'}}</p>
-    <button (click)="goBack()">go back</button>
-  </div>
+<div class="posts">
+<div class="card">
+    <app-post-header [img]="post.author.profile_image" [name]="post.author.formal_name"></app-post-header>
+
+      <img class="left floated mini ui image"
+           src="{{post.image? post.image : 'assets/image/default-no-image.jpg'}}">
+
+        <div class="title_section">
+      <div *ngIf="post.title" class="title">
+        {{ post.title }}
+      </div>
+         <div *ngIf="post.publish_time" class="publish_time">
+        {{ post.publish_time }}
+      </div>
+        </div>
+        <br style="clear:both"/>
+        <div *ngIf="post.context" class="context">
+        {{ post.context }}
+      </div>
+
+    <div class="time_section">
+     <div class="time">
+           زمان شروع :  {{post.event_start_time}}
+     </div>
+    <div class="time">
+        زمان پایان :{{post.event_end_time}}
+    </div>
+        </div>
+    <br style="clear:both" />
+    <div class="location">
+        مکان برگزاری : {{post.event_place}}
+    </div>
+
+     <div class="footer">
+      <span *ngFor="let tag of post.tags" class="badge badge-secondary">{{ tag.name }}</span>
+    </div>
+        <!--<button (click)="goBack()">go back</button>-->
+
+</div>
+</div>
+
+
+<div class="related_posts">
+    <p class="more_texts">موارد پیشنهادی</p>
+<div class="rel_posts">
+<div class="rel_card">
+    <div>
+         <app-post-header [img]="post.author.profile_image" [name]="post.author.formal_name"></app-post-header>
+    <a routerLink="/post/{{ post.id }}">
+
+      <img class="left floated mini ui image"
+           src="{{post.image? post.image : 'assets/image/default-no-image.jpg'}}">
+
+      <div *ngIf="post.title" class="rel_title">
+        {{ post.title }}
+      </div>
+    </a>
+
+    <div class="rel_footer">
+      <span *ngFor="let tag of post.tags" class="badge badge-secondary">{{ tag.name }}</span>
+    </div>
+    </div></div>
+</div>
+    <div class="rel_posts">
+<div class="rel_card">
+    <div>
+         <app-post-header [img]="post.author.profile_image" [name]="post.author.formal_name"></app-post-header>
+    <a routerLink="/post/{{ post.id }}">
+
+      <img class="left floated mini ui image"
+           src="{{post.image? post.image : 'assets/image/default-no-image.jpg'}}">
+
+      <div *ngIf="post.title" class="rel_title">
+        {{ post.title }}
+      </div>
+    </a>
+
+    <div class="rel_footer">
+      <span *ngFor="let tag of post.tags" class="badge badge-secondary">{{ tag.name }}</span>
+    </div>
+    </div></div>
+</div>
+    <div class="rel_posts">
+<div class="rel_card">
+    <div>
+         <app-post-header [img]="post.author.profile_image" [name]="post.author.formal_name"></app-post-header>
+    <a routerLink="/post/{{ post.id }}">
+
+      <img class="left floated mini ui image"
+           src="{{post.image? post.image : 'assets/image/default-no-image.jpg'}}">
+
+      <div *ngIf="post.title" class="rel_title">
+        {{ post.title }}
+      </div>
+    </a>
+
+    <div class="rel_footer">
+      <span *ngFor="let tag of post.tags" class="badge badge-secondary">{{ tag.name }}</span>
+    </div>
+    </div></div>
+</div>
+    <div class="rel_posts">
+<div class="rel_card">
+    <div>
+         <app-post-header [img]="post.author.profile_image" [name]="post.author.formal_name"></app-post-header>
+    <a routerLink="/post/{{ post.id }}">
+
+      <img class="left floated mini ui image"
+           src="{{post.image? post.image : 'assets/image/default-no-image.jpg'}}">
+
+      <div *ngIf="post.title" class="rel_title">
+        {{ post.title }}
+      </div>
+    </a>
+
+    <div class="rel_footer">
+      <span *ngFor="let tag of post.tags" class="badge badge-secondary">{{ tag.name }}</span>
+    </div>
+    </div></div>
+</div>
+    <div class="rel_posts">
+<div class="rel_card">
+    <div>
+         <app-post-header [img]="post.author.profile_image" [name]="post.author.formal_name"></app-post-header>
+    <a routerLink="/post/{{ post.id }}">
+
+      <img class="left floated mini ui image"
+           src="{{post.image? post.image : 'assets/image/default-no-image.jpg'}}">
+
+      <div *ngIf="post.title" class="rel_title">
+        {{ post.title }}
+      </div>
+    </a>
+
+    <div class="rel_footer">
+      <span *ngFor="let tag of post.tags" class="badge badge-secondary">{{ tag.name }}</span>
+    </div>
+    </div></div>
+</div>
+
+
 </div>
