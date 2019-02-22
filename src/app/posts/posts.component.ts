@@ -17,6 +17,7 @@ export class PostsComponent implements OnInit {
   }
 
   constructor(private postService: PostService) {
+    this.numbers = Array(this.max_columns).fill(0).map((x, i) => i);
   }
 
   reArrange(size: number): void {

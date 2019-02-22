@@ -11,6 +11,7 @@ import { PostDetailComponent } from './post-detail/post-detail.component';
 import { NewPostComponent } from './new-post/new-post.component';
 import { PostHeaderComponent } from './post-header/post-header.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
+import { ProfilePageComponent } from './profile-page/profile-page.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
     PostDetailComponent,
     NewPostComponent,
     PostHeaderComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    ProfilePageComponent
   ],
   imports: [
     BrowserModule,
