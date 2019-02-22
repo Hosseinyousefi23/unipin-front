@@ -34,7 +34,8 @@ button:disabled {
 }
 
 img {
-  width: 400px;
+  max-width: 500px;
+  margin: 0;
   /*height: 350px;*/
 }
 
@@ -47,18 +48,20 @@ img {
 }
 
 .img-column {
-  width: 600px;
-  background-color: #f9f9f9;
-  max-height: 800px;
-  min-height: 400px;
-  float: right;
+  width: 100%;
   text-align: center;
+  background-color: #f9f9f9;
+  /*max-height: 800px;*/
+  /*min-height: 400px;*/
+  /*float: right;*/
+  /*position: relative;*/
 }
 
 .content-column {
-  margin-right: 40px;
-  float: right;
+  width: 100%;
+  /*margin-right: 40px;*/
+  /*float: right;*/
   background-color: #f3f3f3;
-  left: 0;
+  /*left: 0;*/
   /*background-color: beige;*/
 }

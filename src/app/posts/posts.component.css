@@ -21,6 +21,48 @@ img {
   /*height: 300px;*/
 }
 
+.the-row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+  justify-content: center;
+}
+
+.the-column {
+  -ms-flex: 23%; /* IE10 */
+  flex: 23%;
+  max-width: 23%;
+  padding: 0 10px;
+}
+
+@media screen and (max-width: 1500px) {
+  .the-column {
+    -ms-flex: 31%;
+    flex: 31%;
+    max-width: 31%;
+  }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1200px) {
+  .the-column {
+    -ms-flex: 47%;
+    flex: 47%;
+    max-width: 47%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .the-column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
@@ -29,8 +71,9 @@ img {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   float: right;
-  margin: 10px 10px 10px 10px;
+  margin: 10px 0;
   font-weight: bold;
+  vertical-align: middle;
   /*align-self: flex-start;*/
   position: relative;
   /*top:-30px;*/
@@ -39,7 +82,7 @@ img {
   /*flex: 1 auto;*!*/
   /*padding: 10px;*/
   height: 0%;
-  width: 340px;
+  /*width: 340px;*/
   /*height: 415px;*/
   background-color: beige;
   border-radius: 4px;
