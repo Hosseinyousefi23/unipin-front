@@ -1,3 +1,5 @@
-<p>
-  profile-page works!
-</p>
+<div *ngIf="person">
+  <h1>{{person.formal_name}}</h1>
+  <img src="{{person.profile_image}}">
+</div>
+<button (click)="goBack()">go back</button>

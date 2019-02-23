@@ -2,9 +2,9 @@
   <div class="the-row">
     <div class="the-column" *ngFor="let num of this.numbers">
       <div *ngFor="let post of posts; let i = index" id="{{post.id}}">
-        <div *ngIf="i % this.max_columns == num" class="card">
-          {{i + 1}}
-          <app-post-header [img]="post.author.profile_image" [name]="post.author.formal_name"></app-post-header>
+        <div *ngIf="i % this.columns == num" class="card">
+          <!--{{i + 1}}-->
+          <app-post-header [author]="post.author"></app-post-header>
           <a routerLink="/post/{{ post.id }}">
 
             <img class="left floated mini ui image"

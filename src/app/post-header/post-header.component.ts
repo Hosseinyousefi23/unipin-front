@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {Person} from '../Person';
 
 @Component({
   selector: 'app-post-header',
@@ -6,8 +7,7 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./post-header.component.css']
 })
 export class PostHeaderComponent implements OnInit {
-  @Input() name: string;
-  @Input() img: string;
+  @Input() author: Person;
 
   constructor() {
   }

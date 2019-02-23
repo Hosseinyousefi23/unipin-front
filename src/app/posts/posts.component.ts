@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {PostService} from '../post.service';
 import {Post} from '../post';
 
@@ -9,7 +9,7 @@ import {Post} from '../post';
 })
 export class PostsComponent implements OnInit {
   posts: Post[];
-  max_columns = 4;
+  columns: number;
   numbers: any[];
 
   getPosts(): void {
@@ -17,15 +17,33 @@ export class PostsComponent implements OnInit {
   }
 
   constructor(private postService: PostService) {
-    this.numbers = Array(this.max_columns).fill(0).map((x, i) => i);
+
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    const width = window.innerWidth;
+    if (width > 1600) {
+      this.reArrange(4);
+    } else if (width > 1200) {
+      this.reArrange(3);
+    } else if (width > 900) {
+      this.reArrange(2);
+    } else {
+      this.reArrange(1);
+    }
   }
 
   reArrange(size: number): void {
-    this.numbers = Array(this.max_columns).fill(0).map((x, i) => i);
+    if (this.columns !== size) {
+      this.columns = size;
+      this.numbers = Array(this.columns).fill(0).map((x, i) => i);
+    }
   }
 
   ngOnInit() {
     this.getPosts();
+    this.onResize(null);
   }
 
 }
