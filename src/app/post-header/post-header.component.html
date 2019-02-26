@@ -1,15 +1,24 @@
 <!--<div class="pin">-->
 
 <!--</div>-->
-<div id="container" *ngIf="author">
-  <a class="link" routerLink="/profile/{{ author.url_name }}">
+<div id="container" *ngIf="post">
+  <a class="link" routerLink="/profile/{{ post.author.url_name }}">
     <div class="groups_detail">
-      <img src="{{ author.profile_image }}" alt="loading...">
-      <span>{{ author.formal_name }}</span>
+      <img src="{{ post.author.profile_image }}" alt="loading...">
+      <span>{{ post.author.formal_name }}</span>
     </div>
   </a>
-  <div class="post_status">
+  <div *ngIf="post.event_status == 0" class="post_status red">
     به اتمام رسیده
+  </div>
+  <div *ngIf="post.event_status == 2" class="post_status green">
+    شروع نشده
+  </div>
+  <div *ngIf="post.event_status == 3" class="post_status yellow">
+    در حال برگزاری
+  </div>
+  <div *ngIf="post.event_status == 1" class="post_status brown">
+    نامشخص
   </div>
   <!--<div class="pin">-->
   <!--<img class="pin-img" src="/assets/image/pin.png">-->

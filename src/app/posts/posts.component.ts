@@ -17,7 +17,6 @@ export class PostsComponent implements OnInit {
   }
 
   constructor(private postService: PostService) {
-
   }
 
   @HostListener('window:resize', ['$event'])

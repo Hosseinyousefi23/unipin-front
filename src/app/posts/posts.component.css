@@ -75,16 +75,8 @@ img {
   margin: 10px 0;
   font-weight: bold;
   vertical-align: middle;
-  /*align-self: flex-start;*/
   position: relative;
-  /*top:-30px;*/
-  /*vertical-align: top;*/
-  /*overflow-y:visible;*/
-  /*flex: 1 auto;*!*/
-  /*padding: 10px;*/
   height: 0%;
-  /*width: 340px;*/
-  /*height: 415px;*/
   background-color: beige;
   border-radius: 4px;
 }
@@ -93,10 +85,6 @@ img {
   display: inline;
   text-decoration: none;
   color: black;
-}
-
-.container {
-  padding: 2px 16px;
 }
 
 .title {
@@ -114,5 +102,7 @@ img {
   display: inline-block;
   margin: 0 2px;
   background-color: #555;
-  /*float: right;*/
 }
+
+
+
