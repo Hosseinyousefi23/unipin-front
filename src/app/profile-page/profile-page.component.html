@@ -1,5 +1,42 @@
-<div *ngIf="person">
-  <h1>{{person.formal_name}}</h1>
-  <img src="{{person.profile_image}}">
+<div style="background-color:azure;">
+<div *ngIf="person" id="group_main_div">
+  <div id="group_present">
+    <div id="img_div">
+        <img src="{{person.profile_image}}" id="img"/>
+    </div>
+    <div id="name_div">
+        <p id="name">{{person.formal_name}}</p>
+        <p id="description">{{person.description}}</p>
+
+
+    </div>
+
+
 </div>
-<button (click)="goBack()">go back</button>
+  <br style="clear: both;"/>
+
+</div>
+<div class="related_posts">
+  <p class="more_texts">موارد پیشنهادی</p>
+  <div class="rel_posts">
+    <div class="rel_card">
+      <!--<div>-->
+        <!--<app-post-header *ngIf="post" [author]="post.author"></app-post-header>-->
+        <!--<a *ngIf="post" routerLink="/post/{{ post.id }}">-->
+
+          <!--<img class="left floated mini ui image"-->
+               <!--src="{{post.image? post.image : 'assets/image/default-no-image.jpg'}}">-->
+
+          <!--<div *ngIf="post && post.title" class="rel_title">-->
+            <!--{{ post.title }}-->
+          <!--</div>-->
+        <!--</a>-->
+
+        <!--<div *ngIf="post" class="rel_footer">-->
+          <!--<span *ngFor="let tag of post.tags" class="badge badge-secondary">{{ tag.name }}</span>-->
+        <!--</div>-->
+      <!--</div>-->
+    </div>
+  </div>
+</div>
+    </div>
