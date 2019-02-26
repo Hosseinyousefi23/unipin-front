@@ -12,6 +12,7 @@ import { NewPostComponent } from './new-post/new-post.component';
 import { PostHeaderComponent } from './post-header/post-header.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
+import { PostCardComponent } from './post-card/post-card.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ProfilePageComponent } from './profile-page/profile-page.component';
     NewPostComponent,
     PostHeaderComponent,
     SearchBarComponent,
-    ProfilePageComponent
+    ProfilePageComponent,
+    PostCardComponent
   ],
   imports: [
     BrowserModule,

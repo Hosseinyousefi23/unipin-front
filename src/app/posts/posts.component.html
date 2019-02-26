@@ -4,7 +4,7 @@
       <div *ngFor="let post of posts; let i = index" id="{{post.id}}">
         <div *ngIf="i % this.columns == num" class="card">
           <!--{{i + 1}}-->
-          <app-post-header [author]="post.author"></app-post-header>
+          <app-post-header [post]="post"></app-post-header>
           <a routerLink="/post/{{ post.id }}">
 
             <img class="left floated mini ui image"

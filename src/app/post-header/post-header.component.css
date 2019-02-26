@@ -56,9 +56,24 @@ p {
   display: inline;
   margin-top: 7px;
   font-size: small;
-  background-color: #f76262;
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
+}
+
+.red {
+  background-color: #f76262;
+}
+
+.green {
+  background-color: lawngreen;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.brown {
+  background-color: brown;
 }
 
 .link {

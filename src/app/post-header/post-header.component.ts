@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Person} from '../Person';
+import {Post} from '../post';
 
 @Component({
   selector: 'app-post-header',
@@ -7,12 +7,14 @@ import {Person} from '../Person';
   styleUrls: ['./post-header.component.css']
 })
 export class PostHeaderComponent implements OnInit {
-  @Input() author: Person;
+  @Input() post: Post;
+
 
   constructor() {
   }
 
   ngOnInit() {
+    console.log(this.post);
   }
 
 }

@@ -1,6 +1,6 @@
 <div class="posts">
   <div class="card">
-    <app-post-header *ngIf="post" [author]="post.author"></app-post-header>
+    <app-post-header [post]="post"></app-post-header>
 
     <img *ngIf="post" class="left floated mini ui image"
          src="{{post.image? post.image : 'assets/image/default-no-image.jpg'}}">
@@ -37,6 +37,7 @@
     <!--<button (click)="goBack()">go back</button>-->
 
   </div>
+
 </div>
 
 
@@ -44,102 +45,27 @@
   <p class="more_texts">موارد پیشنهادی</p>
   <div class="rel_posts">
     <div class="rel_card">
-      <div>
-        <app-post-header *ngIf="post" [author]="post.author"></app-post-header>
-        <a *ngIf="post" routerLink="/post/{{ post.id }}">
-
-          <img class="left floated mini ui image"
-               src="{{post.image? post.image : 'assets/image/default-no-image.jpg'}}">
-
-          <div *ngIf="post && post.title" class="rel_title">
-            {{ post.title }}
-          </div>
-        </a>
-
-        <div *ngIf="post" class="rel_footer">
-          <span *ngFor="let tag of post.tags" class="badge badge-secondary">{{ tag.name }}</span>
-        </div>
-      </div>
+      <app-post-card [post]="post"></app-post-card>
     </div>
   </div>
   <div class="rel_posts">
     <div class="rel_card">
-      <div>
-        <app-post-header *ngIf="post" [author]="post.author"></app-post-header>
-        <a *ngIf="post" routerLink="/post/{{ post.id }}">
-
-          <img class="left floated mini ui image"
-               src="{{post.image? post.image : 'assets/image/default-no-image.jpg'}}">
-
-          <div *ngIf="post.title" class="rel_title">
-            {{ post.title }}
-          </div>
-        </a>
-
-        <div *ngIf="post" class="rel_footer">
-          <span *ngFor="let tag of post.tags" class="badge badge-secondary">{{ tag.name }}</span>
-        </div>
-      </div>
+      <app-post-card [post]="post"></app-post-card>
     </div>
   </div>
   <div class="rel_posts">
     <div class="rel_card">
-      <div>
-        <app-post-header *ngIf="post" [author]="post.author"></app-post-header>
-        <a *ngIf="post" routerLink="/post/{{ post.id }}">
-
-          <img class="left floated mini ui image"
-               src="{{post.image? post.image : 'assets/image/default-no-image.jpg'}}">
-
-          <div *ngIf="post.title" class="rel_title">
-            {{ post.title }}
-          </div>
-        </a>
-
-        <div *ngIf="post" class="rel_footer">
-          <span *ngFor="let tag of post.tags" class="badge badge-secondary">{{ tag.name }}</span>
-        </div>
-      </div>
+      <app-post-card [post]="post"></app-post-card>
     </div>
   </div>
   <div class="rel_posts">
     <div class="rel_card">
-      <div>
-        <app-post-header *ngIf="post" [author]="post.author"></app-post-header>
-        <a *ngIf="post" routerLink="/post/{{ post.id }}">
-
-          <img class="left floated mini ui image"
-               src="{{post.image? post.image : 'assets/image/default-no-image.jpg'}}">
-
-          <div *ngIf="post.title" class="rel_title">
-            {{ post.title }}
-          </div>
-        </a>
-
-        <div *ngIf="post" class="rel_footer">
-          <span *ngFor="let tag of post.tags" class="badge badge-secondary">{{ tag.name }}</span>
-        </div>
-      </div>
+      <app-post-card [post]="post"></app-post-card>
     </div>
   </div>
   <div class="rel_posts">
     <div class="rel_card">
-      <div>
-        <app-post-header *ngIf="post" [author]="post.author"></app-post-header>
-        <a *ngIf="post" routerLink="/post/{{ post.id }}">
-
-          <img class="left floated mini ui image"
-               src="{{post.image? post.image : 'assets/image/default-no-image.jpg'}}">
-
-          <div *ngIf="post.title" class="rel_title">
-            {{ post.title }}
-          </div>
-        </a>
-
-        <div *ngIf="post" class="rel_footer">
-          <span *ngFor="let tag of post.tags" class="badge badge-secondary">{{ tag.name }}</span>
-        </div>
-      </div>
+      <app-post-card [post]="post"></app-post-card>
     </div>
   </div>
 
