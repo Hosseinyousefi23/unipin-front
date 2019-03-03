@@ -13,7 +13,7 @@ export class PostsComponent implements OnInit {
   numbers: any[];
 
   getPosts(): void {
-    this.postService.getPosts().subscribe(posts => this.posts = posts);
+    this.postService.getPosts().subscribe(posts => this.posts = posts.sort((o1, o2) => o2.event_status - o1.event_status));
   }
 
   constructor(private postService: PostService) {
@@ -39,6 +39,7 @@ export class PostsComponent implements OnInit {
       this.numbers = Array(this.columns).fill(0).map((x, i) => i);
     }
   }
+
 
   ngOnInit() {
     this.getPosts();

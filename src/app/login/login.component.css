@@ -1,0 +1,16 @@
+.cool-container {
+  width: 50%;
+  margin: 20px auto;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 15px;
+  border-top: 1px solid black;
+    background-color: #fafafa;
+
+  /*background-color: lightgray;*/
+}
+
+.login-label {
+  text-align: center;
+}

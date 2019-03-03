@@ -1,1 +1,17 @@
+<div class="card">
+  <!--{{i + 1}}-->
+  <app-post-header [post]="post"></app-post-header>
+  <a routerLink="/post/{{ post.id }}">
 
+    <img class="left floated mini ui image"
+         src="{{post.image? post.image : 'assets/image/default-no-image.jpg'}}">
+
+
+    <div *ngIf="post.title" class="title">
+      {{ post.title }}
+    </div>
+  </a>
+  <div class="footer">
+    <span *ngFor="let tag of post.tags" class="badge badge-secondary">{{ tag.name }}</span>
+  </div>
+</div>

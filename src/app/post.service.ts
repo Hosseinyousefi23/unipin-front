@@ -26,6 +26,10 @@ export class PostService {
     return this.http.get<Person>(this.baseUrl + `api/v1/person/${slug}/`);
   }
 
+  getOffers(id: number): Observable<Post[]> {
+    return this.http.get<Post[]>(this.baseUrl + `api/v1/offers?id=${id}`);
+  }
+
   constructor(private http: HttpClient) {
   }
 }

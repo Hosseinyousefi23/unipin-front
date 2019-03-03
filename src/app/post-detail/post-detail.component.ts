@@ -11,21 +11,31 @@ import {Location} from '@angular/common';
 })
 export class PostDetailComponent implements OnInit {
   post: Post;
+  offers: Post[];
+  id = +this.route.snapshot.paramMap.get('id');
 
   constructor(private route: ActivatedRoute, private postService: PostService, private location: Location) {
   }
 
   ngOnInit() {
     this.getPost();
+    this.getOffers();
   }
 
   getPost(): void {
-    const id = +this.route.snapshot.paramMap.get('id');
-    this.postService.getPost(id).subscribe(post => this.post = post);
+    this.postService.getPost(this.id).subscribe(post => this.post = post);
+  }
+
+  getOffers(): void {
+    this.postService.getOffers(this.id).subscribe(offers => this.offers = offers);
   }
 
   goBack(): void {
     this.location.back();
+  }
+
+  log_offers(): void {
+    console.log(this.offers);
   }
 
 }

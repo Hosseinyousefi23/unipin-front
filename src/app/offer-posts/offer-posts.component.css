@@ -1,0 +1,41 @@
+.the-row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+  justify-content: center;
+}
+
+.the-column {
+  -ms-flex: 18%; /* IE10 */
+  flex: 18%;
+  max-width: 18%;
+  padding: 0 4px;
+}
+
+@media screen and (max-width: 1600px) {
+  .the-column {
+    -ms-flex: 24%;
+    flex: 24%;
+    max-width: 24%;
+  }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1200px) {
+  .the-column {
+    -ms-flex: 49%;
+    flex: 49%;
+    max-width: 49%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 900px) {
+  .the-column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
