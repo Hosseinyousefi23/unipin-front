@@ -1,6 +1,7 @@
 import {Component, HostListener, Input, OnInit} from '@angular/core';
 import {Post} from '../post';
 
+
 @Component({
   selector: 'app-offer-posts',
   templateUrl: './offer-posts.component.html',
@@ -10,6 +11,7 @@ export class OfferPostsComponent implements OnInit {
   @Input() posts: Post[];
   columns: number;
   numbers: any[];
+
 
   constructor() {
   }

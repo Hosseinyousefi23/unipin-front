@@ -17,7 +17,13 @@ import {PostCardDetailComponent} from './post-card-detail/post-card-detail.compo
 import {OfferPostsComponent} from './offer-posts/offer-posts.component';
 import {LoginComponent} from './login/login.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { RegisterComponent } from './register/register.component';
+import {RegisterComponent} from './register/register.component';
+import {DpDatePickerModule} from 'ng2-jalali-date-picker';
+// import {TagInputModule} from "ng4-tag-input/dist/modules/ng4-tag-input.module";
+// import {DateTimePickerModule} from 'ng2-datetimepicker-jalali';
+// import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+// import {IrDate}
+
 
 @NgModule({
   declarations: [
@@ -42,6 +48,11 @@ import { RegisterComponent } from './register/register.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    DpDatePickerModule,
+    // TagInputModule
+    // DateTimePickerModule,
+    // NgbModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

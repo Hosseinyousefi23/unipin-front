@@ -2,8 +2,29 @@
   <label for="title">عنوان </label>
   <input type="text" name="title" id="title"/>
   <br/>
-  <label for="content">متن: </label>
+  <label for="context">متن: </label>
   <textarea rows="10" cols="150" id="context" name="context"></textarea>
   <br/>
+  <label for="start-date-picker">تاریخ و زمان شروع</label>
+  <dp-date-picker dir="rtl" [(ngModel)]="startDateObject" mode="daytime" placeholder="تاریخ" theme="dp-material"
+                  name="start-date-picker" id="start-date-picker">
+  </dp-date-picker>
+  <br/>
+  <label for="end-date-picker">تاریخ و زمان اتمام</label>
+  <dp-date-picker dir="rtl" [(ngModel)]="endDateObject" mode="daytime" placeholder="تاریخ" theme="dp-material"
+                  name="end-date-picker" id="end-date-picker">
+  </dp-date-picker>
+  <br/>
+  <label for="place">مکان: </label>
+  <input type="text" name="place" id="place">
+  <br/>
+  <label for="tags">تگ ها: </label>
+  <div id="tags" *ngIf="tags">
+    <label *ngFor="let tag of tags">
+      <input type="checkbox">
+      {{tag.name}}
+      <br/>
+    </label>
+  </div>
   <input type="submit" value="Post"/>
 </form>
