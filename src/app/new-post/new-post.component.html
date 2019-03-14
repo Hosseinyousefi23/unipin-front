@@ -1,30 +1,35 @@
+<div class="cool-container">
+    <h2 class="login-label">ایجاد رویداد جدید</h2>
 <form action="" method="post">
+  <div class="form-group">
   <label for="title">عنوان </label>
-  <input type="text" name="title" id="title"/>
+  <input type="text" name="title" id="title" class="form-control" placeholder="یک عنوان برای رویداد خود انتخاب کنید ..."/>
   <br/>
-  <label for="context">متن: </label>
-  <textarea rows="10" cols="150" id="context" name="context"></textarea>
+  <label for="context">توضیحات</label>
+  <textarea rows="5" cols="150" id="context" name="context" class="form-control" placeholder="توضیحات مربوط به رویداد خود را در این قسمت وارد کنید ..."></textarea>
   <br/>
-  <label for="start-date-picker">تاریخ و زمان شروع</label>
+  <label for="start-date-picker">تاریخ و زمان شروع رویداد</label>
   <dp-date-picker dir="rtl" [(ngModel)]="startDateObject" mode="daytime" placeholder="تاریخ" theme="dp-material"
-                  name="start-date-picker" id="start-date-picker">
+                  name="start-date-picker" id="start-date-picker" class="cool-date-picker" style="display: inline;">
   </dp-date-picker>
   <br/>
-  <label for="end-date-picker">تاریخ و زمان اتمام</label>
+  <label for="end-date-picker">تاریخ و زمان اتمام رویداد</label>
   <dp-date-picker dir="rtl" [(ngModel)]="endDateObject" mode="daytime" placeholder="تاریخ" theme="dp-material"
-                  name="end-date-picker" id="end-date-picker">
+                  name="end-date-picker" id="end-date-picker" class="cool-date-picker" style="display: inline;">
   </dp-date-picker>
   <br/>
-  <label for="place">مکان: </label>
-  <input type="text" name="place" id="place">
+  <label for="place">مکان برگزاری رویداد </label>
+  <input type="text" name="place" id="place" class="form-control" placeholder="مکان برگزاری رویداد را وارد کنید ...">
   <br/>
-  <label for="tags">تگ ها: </label>
+  <label for="tags">برچسب‌ها (حداکثر پنج مورد از میان برچسب‌های زیر انتخاب کنید) </label>
   <div id="tags" *ngIf="tags">
     <label *ngFor="let tag of tags">
-      <input type="checkbox">
+      <input type="checkbox" >
       {{tag.name}}
       <br/>
     </label>
   </div>
-  <input type="submit" value="Post"/>
+  <input type="submit" value="ایجاد" id="cool-btn"/>
+  </div>
 </form>
+</div>

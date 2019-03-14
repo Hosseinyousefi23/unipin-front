@@ -116,11 +116,12 @@ img {
   margin: -10px 5px 5px 5px;
   border-bottom: 1px solid darkgrey;
   padding-bottom: 15px;
-  text-align: center;
+  text-align: justify;
 }
 
 .footer {
   margin: 0px 5px 5px 3px;
+  height: auto;
 }
 
 .badge {
@@ -189,7 +190,7 @@ img {
 }
 
 .rel_footer {
-  height: 30px;
+  height: auto;
   float: right;
 }
 

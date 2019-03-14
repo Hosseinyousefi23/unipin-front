@@ -12,7 +12,8 @@
   vertical-align: middle;
   position: relative;
   height: 0%;
-  background-color: beige;
+  /*background-color: #a0adb91f;*/
+  background-color: honeydew;
   border-radius: 4px;
 }
 
@@ -29,8 +30,9 @@
 }
 
 .footer {
-  height: 30px;
+  height: auto;
   float: right;
+  padding-bottom: 3px;
 }
 
 .footer span {
