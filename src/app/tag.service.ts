@@ -12,7 +12,7 @@ export class TagService {
   baseUrl = environment.baseUrl;
 
   getTags(): Observable<Tag[]> {
-    return this.http.get<Post[]>(this.baseUrl + `api/v1/tag/`);
+    return this.http.get<Tag[]>(this.baseUrl + `api/v1/tag/`);
   }
 
   constructor(private http: HttpClient) {

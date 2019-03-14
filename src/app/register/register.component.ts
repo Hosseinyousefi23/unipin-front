@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {first} from 'rxjs/operators';
-
+import {Location} from '@angular/common';
 import {AlertService} from '../alert.service';
 import {UserService} from '../user.service';
 
@@ -18,6 +18,7 @@ export class RegisterComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder,
               private router: Router,
+              private location: Location,
               private userService: UserService,
               private alertService: AlertService) {
   }
@@ -34,6 +35,10 @@ export class RegisterComponent implements OnInit {
   // convenience getter for easy access to form fields
   get f() {
     return this.registerForm.controls;
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 
   onSubmit() {

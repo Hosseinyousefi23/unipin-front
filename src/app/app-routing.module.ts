@@ -6,6 +6,7 @@ import {NewPostComponent} from './new-post/new-post.component';
 import {ProfilePageComponent} from './profile-page/profile-page.component';
 import {LoginComponent} from './login/login.component';
 import {RegisterComponent} from './register/register.component';
+import {ForgotComponent} from './forgot/forgot.component';
 
 const routes: Routes = [
   {path: '', component: PostsComponent},
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path: 'new-post', component: NewPostComponent},
   {path: 'profile/:slug', component: ProfilePageComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'register', component: RegisterComponent}
+  {path: 'register', component: RegisterComponent},
+  {path: 'forgot', component: ForgotComponent}
 ];
 
 @NgModule({

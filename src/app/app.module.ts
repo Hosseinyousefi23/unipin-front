@@ -19,6 +19,7 @@ import {LoginComponent} from './login/login.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {RegisterComponent} from './register/register.component';
 import {DpDatePickerModule} from 'ng2-jalali-date-picker';
+import { ForgotComponent } from './forgot/forgot.component';
 // import {TagInputModule} from "ng4-tag-input/dist/modules/ng4-tag-input.module";
 // import {DateTimePickerModule} from 'ng2-datetimepicker-jalali';
 // import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
@@ -40,7 +41,8 @@ import {DpDatePickerModule} from 'ng2-jalali-date-picker';
     PostCardDetailComponent,
     OfferPostsComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ForgotComponent
   ],
   imports: [
     BrowserModule,
