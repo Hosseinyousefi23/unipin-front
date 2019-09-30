@@ -14,7 +14,9 @@
   </div>
   <br style="clear:both"/>
   <div *ngIf="post && post.context" class="context">
+    <pre>
     {{ post.context }}
+    </pre>
   </div>
 
   <div *ngIf="post" class="time_section">
@@ -26,7 +28,7 @@
     </div>
   </div>
   <br style="clear:both"/>
-  <div *ngIf="post" class="location">
+  <div *ngIf="post" class="{{post.tags.length > 0? 'location': 'location-notag'}}">
     مکان برگزاری : {{post.event_place}}
   </div>
 

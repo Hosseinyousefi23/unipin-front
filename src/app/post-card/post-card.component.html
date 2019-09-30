@@ -7,7 +7,7 @@
          src="{{post.image? post.image : 'assets/image/default-no-image.jpg'}}">
 
 
-    <div *ngIf="post.title" class="title">
+    <div *ngIf="post.title" class="{{post.tags.length > 0? 'title': 'title-notag'}}">
       {{ post.title }}
     </div>
   </a>

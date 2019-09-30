@@ -56,6 +56,7 @@ p {
   display: inline;
   margin-top: 7px;
   font-size: small;
+  font-weight: bold;
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
 }
@@ -73,7 +74,12 @@ p {
 }
 
 .brown {
-  background-color: brown;
+  /*background-color: brown;*/
+  background-color: #ce5252;
+}
+
+lightGray {
+  background-color: lightgray;
 }
 
 .link {

@@ -1,17 +1,24 @@
 /* HeroDetailComponent's private CSS styles */
 .post-container {
-  width: 50%;
+  width: 60%;
   margin: 20px auto 40px auto;
   min-width: 395px;
 }
 
-#offer_div{
-    margin: auto;
-    width: 90%;
-    border-bottom: 1px solid;
-    margin-bottom: 20px;
+#offer_div {
+  margin: auto;
+  width: 90%;
+  border-bottom: 1px solid;
+  margin-bottom: 20px;
 }
 
-#offer_p{
+#offer_p {
   font-size: large;
+}
+
+@media (max-width: 980px) {
+  .post-container {
+    width: 80%;
+  }
+
 }

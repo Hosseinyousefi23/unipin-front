@@ -5,13 +5,9 @@
 export const environment = {
   production: false,
   baseUrl: 'http://localhost:8000/',
+  BaseAPIURL: 'api/v1/',
   // baseUrl: 'http://api.chatrbaazan.ir/',
   // mainurl: 'http://chatrbaazan.ir/'
-  // x_large: 960,
-  // large: 768,
-  // medium: 640,
-  // small: 480,
-  // tiny: 300
 };
 
 /*

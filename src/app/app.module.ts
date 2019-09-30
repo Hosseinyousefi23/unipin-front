@@ -20,6 +20,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {RegisterComponent} from './register/register.component';
 import {DpDatePickerModule} from 'ng2-jalali-date-picker';
 import { ForgotComponent } from './forgot/forgot.component';
+import {FileDropModule} from "ngx-file-drop";
 // import {TagInputModule} from "ng4-tag-input/dist/modules/ng4-tag-input.module";
 // import {DateTimePickerModule} from 'ng2-datetimepicker-jalali';
 // import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
@@ -51,6 +52,7 @@ import { ForgotComponent } from './forgot/forgot.component';
     FormsModule,
     ReactiveFormsModule,
     DpDatePickerModule,
+    FileDropModule,
     // TagInputModule
     // DateTimePickerModule,
     // NgbModule,

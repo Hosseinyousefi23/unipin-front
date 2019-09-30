@@ -1,35 +1,49 @@
 <div class="cool-container">
-    <h2 class="login-label">ایجاد رویداد جدید</h2>
-<form action="" method="post">
-  <div class="form-group">
-  <label for="title">عنوان </label>
-  <input type="text" name="title" id="title" class="form-control" placeholder="یک عنوان برای رویداد خود انتخاب کنید ..."/>
-  <br/>
-  <label for="context">توضیحات</label>
-  <textarea rows="5" cols="150" id="context" name="context" class="form-control" placeholder="توضیحات مربوط به رویداد خود را در این قسمت وارد کنید ..."></textarea>
-  <br/>
-  <label for="start-date-picker">تاریخ و زمان شروع رویداد</label>
-  <dp-date-picker dir="rtl" [(ngModel)]="startDateObject" mode="daytime" placeholder="تاریخ" theme="dp-material"
-                  name="start-date-picker" id="start-date-picker" class="cool-date-picker" style="display: inline;">
-  </dp-date-picker>
-  <br/>
-  <label for="end-date-picker">تاریخ و زمان اتمام رویداد</label>
-  <dp-date-picker dir="rtl" [(ngModel)]="endDateObject" mode="daytime" placeholder="تاریخ" theme="dp-material"
-                  name="end-date-picker" id="end-date-picker" class="cool-date-picker" style="display: inline;">
-  </dp-date-picker>
-  <br/>
-  <label for="place">مکان برگزاری رویداد </label>
-  <input type="text" name="place" id="place" class="form-control" placeholder="مکان برگزاری رویداد را وارد کنید ...">
-  <br/>
-  <label for="tags">برچسب‌ها (حداکثر پنج مورد از میان برچسب‌های زیر انتخاب کنید) </label>
-  <div id="tags" *ngIf="tags">
-    <label *ngFor="let tag of tags">
-      <input type="checkbox" >
-      {{tag.name}}
+  <h2 class="login-label">ایجاد رویداد جدید</h2>
+  <form action="" method="post">
+    <div class="form-group">
+      <label for="title">عنوان </label>
+      <input type="text" name="title" id="title" class="form-control"
+             placeholder="یک عنوان برای رویداد خود انتخاب کنید ..."/>
       <br/>
-    </label>
-  </div>
-  <input type="submit" value="ایجاد" id="cool-btn"/>
-  </div>
-</form>
+      <label for="context">توضیحات</label>
+      <textarea rows="5" cols="150" id="context" name="context" class="form-control"
+                placeholder="توضیحات مربوط به رویداد خود را در این قسمت وارد کنید ..."></textarea>
+      <br/>
+      <label for="start-date-picker">تاریخ و زمان شروع رویداد</label>
+      <dp-date-picker dir="rtl" [(ngModel)]="startDateObject" mode="daytime" placeholder="تاریخ" theme="dp-material"
+                      name="start-date-picker" id="start-date-picker" class="cool-date-picker" style="display: inline;">
+      </dp-date-picker>
+      <br/>
+      <label for="end-date-picker">تاریخ و زمان اتمام رویداد</label>
+      <dp-date-picker dir="rtl" [(ngModel)]="endDateObject" mode="daytime" placeholder="تاریخ" theme="dp-material"
+                      name="end-date-picker" id="end-date-picker" class="cool-date-picker" style="display: inline;">
+      </dp-date-picker>
+      <br/>
+      <label for="place">مکان برگزاری رویداد </label>
+      <input type="text" name="place" id="place" class="form-control"
+             placeholder="مکان برگزاری رویداد را وارد کنید ...">
+      <br/>
+      <label for="image">عکس</label>
+      <div id="image">
+        <div class="center">
+          <file-drop dropZoneLabel="Drop files here" (onFileDrop)="dropped($event)"
+                     (onFileOver)="file_over($event)" (onFileLeave)="file_leave($event)">
+            <span>optional content (don't set dropZoneLabel then)</span>
+          </file-drop>
+        </div>
+
+      </div>
+      <img src="{{this.image}}" *ngIf="this.image">
+      <label for="tags">برچسب‌ها (حداکثر پنج مورد از میان برچسب‌های زیر انتخاب کنید) </label>
+      <div id="tags" *ngIf="tags">
+        <label *ngFor="let tag of tags">
+          <input type="checkbox">
+          {{tag.name}}
+          <br/>
+        </label>
+      </div>
+      <input type="submit" value="ایجاد" id="cool-btn"/>
+    </div>
+  </form>
 </div>

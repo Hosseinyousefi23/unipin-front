@@ -29,6 +29,11 @@
   padding: 10px 0;
 }
 
+.title-notag {
+  text-align: center;
+  padding: 10px 0;
+}
+
 .footer {
   height: auto;
   float: right;

@@ -1,8 +1,8 @@
 /*@import '~bootstrap/dist/css/bootstrap.min.css';*/
 .cool-container {
   width: 50%;
-  min-width : 360px;
-  border-radius : 30px;
+  min-width: 360px;
+  border-radius: 30px;
   margin: 20px auto;
   border-left: 1px solid black;
   border-right: 1px solid black;
@@ -18,21 +18,20 @@
   text-align: center;
 }
 
-.cool-date-picker important{
-    display: inline;
+.cool-date-picker important {
+  display: inline;
 }
 
-.cool-date-picker::after{
-    display: inline;
+.cool-date-picker::after {
+  display: inline;
 }
 
-#cool-btn{
-    width: 80px;
-    margin: auto;
-    display: flow-root;
-    background: #2f2f2fba;
-    color: white;
-    margin-top: 20px;
-  outline:red;
+#cool-btn {
+  width: 80px;
+  margin: auto;
+  display: flow-root;
+  background: #2f2f2fba;
+  margin-top: 20px;
+  outline: red;
 
 }
